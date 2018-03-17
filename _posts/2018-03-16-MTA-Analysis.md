@@ -1,6 +1,7 @@
 ---
-title: MTA Analysis
 layout: post
+title: MTA Analysis!
+use_code: true
 ---
 
 # Analyzing Changing MTA Subway Ridership Patterns in Downtown Brooklyn
