@@ -1,6 +1,6 @@
 ---
 layout: post
-title: You're up and running!
+title: MTA Analysis!
 ---
 
 # Analyzing Changing MTA Subway Ridership Patterns in Downtown Brooklyn
