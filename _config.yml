@@ -1,4 +1,5 @@
 name: Data_data
+markdown: GFM
 markdown: kramdown
 
 kramdown:
