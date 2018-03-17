@@ -12,7 +12,7 @@ It was interesting then to look at the most obvious place of impact: The MTA Sub
 
 Using Python and [MTA Turnstile Data](http://web.mta.info/developers/turnstile.html), Downtown Brooklyn subway stations were analyzed to show changes in monthly ridership. 
 
-###Scraping MTA Data and Saving as .csv Files
+### Scraping MTA Data and Saving as .csv Files
 
 ```python
 from datetime import datetime, timedelta
