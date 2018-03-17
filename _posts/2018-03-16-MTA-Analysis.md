@@ -104,8 +104,6 @@ df3pivot.plot(kind = 'bar')
 
 As expected ridership increased in Downtown Brooklyn. 
 
-Dekalb saw almost 1M more people enter the station YoY 2016 to 2017, rising 17% 
-
-### Ridership increased consistently every month in 2017 vs 2016. 
+Dekalb saw almost 1M more people enter the station YoY 2016 to 2017, rising 17%. Ridership increased consistently every month in 2017 vs 2016. 
 
 <img src="/img/dekalb.png" height="50%" width="50%" class="inline"/>
