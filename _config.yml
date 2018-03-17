@@ -1,7 +1,2 @@
 name: Data_data
 markdown: GFM
-markdown: kramdown
-
-kramdown:
-  input: GFM
-  hard_wrap: false
