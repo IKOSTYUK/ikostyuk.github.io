@@ -6,4 +6,31 @@ In his piece, [Don't you be my Neighbor](http://nymag.com/nymetro/realestate/urb
 
 > I used to live in Fort Greene, and whenever I visit my old neighborhood, I am tormented by the same absurd thought: I should have bought that crack house when I had the chance.
 
-The [rezoning](https://www.brooklyn-usa.org/wp-content/uploads/2016/02/Downtown-Brooklyn-2004-Rezoning_Final.pdf) of Dowtown Brooklyn added almost 10M sf of residential space and over 1M sf of both office and retail space. 
+The 2004 [rezoning](https://www.brooklyn-usa.org/wp-content/uploads/2016/02/Downtown-Brooklyn-2004-Rezoning_Final.pdf) of Dowtown Brooklyn added almost 10M sf of residential space and over 1M sf of both office and retail space. 
+
+It was interesting then to look at the most obvious place of impact: The MTA Subway system, which still remains the primary source of transportation for millions of New Yorkers. 
+
+Using Python and [MTA Turnstile Data](http://web.mta.info/developers/turnstile.html), Downtown Brooklyn subway stations were analyzed to show changes in monthly ridership. 
+
+###Scraping MTA Data and Saving as .csv Files
+
+```python
+from datetime import datetime, timedelta
+import pandas as pd
+import time
+
+def get_data():
+
+    end_date = datetime.strptime(time.strftime("%y%m%d"), '%y%m%d')
+    begin_date = datetime.strptime('170916', '%y%m%d')
+    base_link = 'http://web.mta.info/developers/data/nyct/turnstile/turnstile_'
+
+    while(begin_date < end_date):
+
+        link = '{0}{1}.txt'.format(base_link, begin_date.strftime("%y%m%d"))
+        print ("Retrieving data from...")
+        df = pd.read_csv(link)
+        df.to_csv('{0}.csv'.format(begin_date.strftime("%y%m%d")), index=False)
+        
+        begin_date = begin_date + timedelta(days=7)      
+```
