@@ -4,8 +4,10 @@
 @import "jekyll-theme-primer";
 
 body {
-    margin: 100px,100px,100px,100px auto;
-    width: 100%;
+    width: 50%;
+    border: 25px solid green;
+    padding: 20px;
+    margin: 20px; 
     
 }
 
@@ -14,7 +16,6 @@ nav ul, footer ul {
     padding: 10px;
     list-style: none;
     font-weight: bold;
-    border: 25px solid green;
 }
 
 nav ul li, footer ul li {
