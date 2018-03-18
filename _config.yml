@@ -1,3 +1,4 @@
 name: Data_data
 markdown: GFM
 highlighter: rouge
+theme: jekyll-theme-primer
