@@ -1,5 +1,5 @@
 ---
-layout: Post
+layout: Default
 title: MTA Analysis!
 ---
 
