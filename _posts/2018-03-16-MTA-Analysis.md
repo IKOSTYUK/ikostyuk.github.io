@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: Post
 title: MTA Analysis!
 ---
 
@@ -17,9 +17,12 @@ It was interesting then to look at the most obvious place of impact: The MTA Sub
 
 Using Python and [MTA Turnstile Data](http://web.mta.info/developers/turnstile.html), Downtown Brooklyn subway stations were analyzed to show changes in monthly ridership. 
 
+
 ## Python Code
 
-### Scraping MTA Data and Saving as .csv Files
+
+### 1) Scraping MTA Data and Saving as .csv Files
+
 
 ```python
 from datetime import datetime, timedelta
@@ -42,7 +45,9 @@ def get_data():
         begin_date = begin_date + timedelta(days=7)      
 ```
 
-### Reading the .csv Files to Isolate Station Data
+
+### 2) Reading the .csv Files to Isolate Station Data
+
 
 ```python
 import glob
@@ -63,7 +68,8 @@ station.to_csv('dekalb.csv', sep=',')
 ```
 
 
-### Analyzing Station Data
+### 3) Analyzing Station Data
+
 
 ```python
 %matplotlib inline
@@ -105,7 +111,10 @@ df3pivot.plot(kind = 'bar')
 
 ```
 
+
 ## Results
+
+
 
 As expected ridership increased in Downtown Brooklyn. 
 
