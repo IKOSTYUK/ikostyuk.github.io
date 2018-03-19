@@ -118,6 +118,14 @@ df3pivot.plot(kind = 'bar')
 
 As expected ridership increased in Downtown Brooklyn. 
 
-Dekalb saw almost 1M more people enter the station YoY 2017 vs 2016, rising 17%. Ridership increased consistently every month in 2017 vs 2016. 
+### Dekalb saw almost 1M more people enter the station YoY 2017 vs 2016, rising 17%. 
 
-<img src="/img/dekalb.png" height="70%" width="70%" class="inline"/>
+<img src="/img/mta/dekalb.png" height="70%" width="70%" class="inline"/>
+
+### Jay St saw a 9% and 3% uptick on their R and ACF entrances respectively. 
+
+<img src="/img/mta/jay-r.png" height="50%" width="50%" class="inline"/>
+<img src="/img/mta/jay-acf.png" height="50%" width="50%" class="inline"/>
+
+
+
