@@ -1,11 +1,11 @@
 ---
 layout: default
-title: MTA Analysis!
+title: MTA Analysis
 ---
 
 ## Analyzing Changing MTA Subway Ridership Patterns in Downtown Brooklyn
 
- Downtown Brooklyn has seen an explosion in recent developments. As real estate prices rise in tandem with adjacent luxury towers, so do hopes and regrets. 
+ Downtown Brooklyn is seeing an explosion in recent developments. As real estate prices rise in tandem with adjacent luxury towers, so do hopes and regrets. 
 
 In his piece, [Don't You Be My Neighbor](http://nymag.com/nymetro/realestate/urbandev/features/n_10289/), Colson Whitehead sums it up with his first sentence:
 
