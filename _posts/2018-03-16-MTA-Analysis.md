@@ -24,7 +24,7 @@ Using Python and [MTA Turnstile Data](http://web.mta.info/developers/turnstile.h
 ### 1) Scraping MTA Data and Saving as .csv Files
 
 <pre><code>
-```python
+
 from datetime import datetime, timedelta
 import pandas as pd
 import time
@@ -44,7 +44,7 @@ def get_data():
         df.to_csv('{0}.csv'.format(begin_date.strftime("%y%m%d")), index=False)
         
         begin_date = begin_date + timedelta(days=7)      
-```
+
 </pre></code>
 
 ### 2) Reading the .csv Files to Isolate Station Data
