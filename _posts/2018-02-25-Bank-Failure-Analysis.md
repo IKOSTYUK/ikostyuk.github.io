@@ -16,7 +16,7 @@ Using python and the FDIC data, bank closings were mapped using [geoplotlib](htt
 ### Viewing Bank Closure Data with geoplotlib
 <img src="/img/bank/Bank_Map.png" height="100%" width="100%" class="inline"/>
 
-### Closings Peaked in 2009-2010
+### Closures Peaked in 2009-2010
 <img src="/img/bank/Bank_Year.png" height="100%" width="100%" class="inline"/>
 
 ### Georgia Led in Bank Failures
