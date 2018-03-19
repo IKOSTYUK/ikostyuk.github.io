@@ -3,9 +3,9 @@ layout: default
 title: MTA Analysis!
 ---
 
-# Analyzing Changing MTA Subway Ridership Patterns in Downtown Brooklyn
+## Analyzing Changing MTA Subway Ridership Patterns in Downtown Brooklyn
 
-Downtown Brooklyn has seen an explosion in recent developments. As real estate prices rise in tandem with adjacent luxury towers, so do hopes and regrets. 
+ Downtown Brooklyn has seen an explosion in recent developments. As real estate prices rise in tandem with adjacent luxury towers, so do hopes and regrets. 
 
 In his piece, [Don't You Be My Neighbor](http://nymag.com/nymetro/realestate/urbandev/features/n_10289/), Colson Whitehead sums it up with his first sentence:
 
@@ -19,7 +19,7 @@ It was interesting then to look at the most obvious place of impact: The MTA Sub
 ## Methods
  
 
-Using Python and [MTA Turnstile Data](http://web.mta.info/developers/turnstile.html), Downtown Brooklyn subway stations were analyzed to show changes in monthly ridership. All of the individual csv files were downloaded and saved locally using [download.py](https://github.com/IKOSTYUK/MTA-Project/blob/master/download.py). Then one complete dataframe was created by combining all of the saved csv files using [read.py](https://github.com/IKOSTYUK/MTA-Project/blob/master/read.py). Finally, the data was sliced and diced by filtering for specific stations and different station devices [analyze.py](https://github.com/IKOSTYUK/MTA-Project/blob/master/analyze.py).
+ Using Python and [MTA Turnstile Data](http://web.mta.info/developers/turnstile.html), Downtown Brooklyn subway stations were analyzed to show changes in monthly ridership. All of the individual csv files were downloaded and saved locally using [download.py](https://github.com/IKOSTYUK/MTA-Project/blob/master/download.py). Then one complete dataframe was created by combining all of the saved csv files using [read.py](https://github.com/IKOSTYUK/MTA-Project/blob/master/read.py). Finally, the data was sliced and diced by filtering for specific stations and different station devices [analyze.py](https://github.com/IKOSTYUK/MTA-Project/blob/master/analyze.py).
 
 
 
