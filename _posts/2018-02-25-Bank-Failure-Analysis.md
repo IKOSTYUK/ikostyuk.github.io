@@ -55,7 +55,7 @@ geoplotlib.dot(data2)
 geoplotlib.show()
 
 ```
-<h3>Visualizing Bank Failures in the USA with Python & geoplotlib, Years: 2000-2017</h3>
+                    ### Visualizing Bank Failures in the USA with Python & geoplotlib, Years: 2000-2017
 <img src="/img/bank/Bank_Map.png" height="100%" width="100%" class="inline"/>
 
 ### Visualizing via Bar Graph
@@ -74,7 +74,6 @@ state = state.sort_values(ascending=False)[:17]
 year.plot(kind= 'bar', title = 'Bank Failure by Year')
 ```
 
-<h3>Bank Failure by Year, Years: 2000-2017</h3>
 <img src="/img/bank/Bank_Year.png" height="100%" width="100%" class="inline"/>
 
 
@@ -82,6 +81,5 @@ year.plot(kind= 'bar', title = 'Bank Failure by Year')
 state.plot(kind= 'bar', title = 'Bank Failure by State, Year: 2000-2017')
 ```
 
-<h3>Bank Failure by State, Years: 2000-2017</h3>
 <img src="/img/bank/Bank_State.png" height="100%" width="100%" class="inline"/>
 
