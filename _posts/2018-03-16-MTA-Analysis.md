@@ -29,12 +29,12 @@ As expected ridership increased in Downtown Brooklyn.
 
 ### Dekalb saw almost 1M more people enter the station YoY 2017 vs 2016, rising 17%. 
 
-<img src="/img/mta/deklab.png" height="50%" width="50%" class="inline"/>
+<img src="/img/mta/deklab.png" height="100%" width="100%" class="inline"/>
 
 ### Jay St saw a 9% and 3% uptick in their R and ACF entrances respectively. 
 
-<img src="/img/mta/jay-r.png" height="50%" width="50%" class="inline"/>
-<img src="/img/mta/jay-acf.png" height="50%" width="50%" class="inline"/>
+<img src="/img/mta/jay-r.png" height="100%" width="100%" class="inline"/>
+<img src="/img/mta/jay-acf.png" height="100%" width="100%" class="inline"/>
 
 
 
