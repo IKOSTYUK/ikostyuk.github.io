@@ -122,7 +122,7 @@ As expected ridership increased in Downtown Brooklyn.
 
 <img src="/img/mta/deklab.png" height="50%" width="50%" class="inline"/>
 
-### Jay St saw a 9% and 3% uptick on their R and ACF entrances respectively. 
+### Jay St saw a 9% and 3% uptick in their R and ACF entrances respectively. 
 
 <img src="/img/mta/jay-r.png" height="50%" width="50%" class="inline"/>
 <img src="/img/mta/jay-acf.png" height="50%" width="50%" class="inline"/>
