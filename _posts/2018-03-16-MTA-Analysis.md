@@ -15,12 +15,15 @@ The 2004 [rezoning](https://www.brooklyn-usa.org/wp-content/uploads/2016/02/Down
 
 It was interesting then to look at the most obvious place of impact: The MTA Subway system, which still remains the primary source of transportation for millions of New Yorkers. 
 
-Using Python and [MTA Turnstile Data](http://web.mta.info/developers/turnstile.html), Downtown Brooklyn subway stations were analyzed to show changes in monthly ridership. 
+
+## Methods
+ 
+
+Using Python and [MTA Turnstile Data](http://web.mta.info/developers/turnstile.html), Downtown Brooklyn subway stations were analyzed to show changes in monthly ridership. All of the individual csv files were downloaded and saved locally using [download.py](https://github.com/IKOSTYUK/MTA-Project/blob/master/download.py). Then one complete dataframe was created by combining all of the saved csv files using [read.py](https://github.com/IKOSTYUK/MTA-Project/blob/master/read.py). Finally, the data was sliced and diced by filtering for specific stations and different station devices [analyze.py](https://github.com/IKOSTYUK/MTA-Project/blob/master/analyze.py).
+
 
 
 ## Results
-
-
 
 As expected ridership increased in Downtown Brooklyn. 
 
