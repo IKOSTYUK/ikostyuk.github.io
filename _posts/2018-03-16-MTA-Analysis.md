@@ -31,16 +31,17 @@ As expected ridership increased in Downtown Brooklyn.
 
 <img src="/img/mta/deklab.png" height="100%" width="100%" class="inline"/>
 
-### Jay St saw a 9% and 3% uptick in their R and ACF entrances respectively. 
+### Jay St saw a 9% and 3% uptick in their R and ACF entrance respectively. 
 
 <img src="/img/mta/jay-r.png" height="100%" width="100%" class="inline"/>
 <img src="/img/mta/jay-acf.png" height="100%" width="100%" class="inline"/>
 
-### Borough Hall saw a 10% (+75K) and 5% (+360K) uptick in their R and 2345 entrances respectively
+### Borough Hall saw a 10% (+75K) and 5% (+360K) increase in R and 2345 entrance traffic respectively.
 
 <img src="/img/mta/BHR.png" height="100%" width="100%" class="inline"/>
 <img src="/img/mta/BH2345.png" height="100%" width="100%" class="inline"/>
 
+### ATL AV-BARCLAY stayed relatively flat, seeing a 2% (+60K) and -1% (-56K) change in BDNQR and 2345 entrance traffic respectively. 
 
-
- 
+<img src="/img/mta/atlBDNQR.png" height="100%" width="100%" class="inline"/>
+<img src="/img/mta/atl2345.png" height="100%" width="100%" class="inline"/>
