@@ -45,3 +45,8 @@ As expected ridership increased in Downtown Brooklyn.
 
 <img src="/img/mta/AtlBDNQR.png" height="100%" width="100%" class="inline"/>
 <img src="/img/mta/Atlantic2345.png" height="100%" width="100%" class="inline"/>
+
+Ultimately, the stations in the middle of all the new developments have seen an increase in station traffic
+<img src="/img/mta/Capture.jpg" height="100%" width="100%" class="inline"/>
+
+Further analysis on surrounding stations and the overall % change in traffic throughout the MTA system would help shed more light on the magniture of the increase in comparison to a benchmark. 
