@@ -44,9 +44,3 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
-
-img {
-   padding:1px;
-   border:1px solid #999;
-   background-color:#999;
-}
