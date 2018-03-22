@@ -36,5 +36,11 @@ As expected ridership increased in Downtown Brooklyn.
 <img src="/img/mta/jay-r.png" height="100%" width="100%" class="inline"/>
 <img src="/img/mta/jay-acf.png" height="100%" width="100%" class="inline"/>
 
+### Borough Hall saw a 10% (+75K) and 5% (+360K) uptick in their R and 2345 entrances respectively
+
+<img src="/img/mta/BHR.png" height="100%" width="100%" class="inline"/>
+<img src="/img/mta/BH2345.png" height="100%" width="100%" class="inline"/>
 
 
+
+ 
