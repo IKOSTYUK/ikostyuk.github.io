@@ -43,5 +43,5 @@ As expected ridership increased in Downtown Brooklyn.
 
 ### ATL AV-BARCLAY stayed relatively flat, seeing a 2% (+60K) and -1% (-56K) change in BDNQR and 2345 entrance traffic respectively. 
 
-<img src="/img/mta/atlBDNQR.png" height="100%" width="100%" class="inline"/>
-<img src="/img/mta/atl2345.png" height="100%" width="100%" class="inline"/>
+<img src="/img/mta/AtlBDNQR.png" height="100%" width="100%" class="inline"/>
+<img src="/img/mta/Atlantic2345.png" height="100%" width="100%" class="inline"/>
