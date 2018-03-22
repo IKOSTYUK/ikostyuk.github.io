@@ -9,7 +9,7 @@ title: MTA Analysis
 
 In his piece, [Don't You Be My Neighbor](http://nymag.com/nymetro/realestate/urbandev/features/n_10289/), Colson Whitehead sums it up with his first sentence:
 
-> "I used to live in Fort Greene, and whenever I visit my old neighborhood, I am tormented by the same absurd thought: I should have bought that crack house when I had the chance."
+<blockquote> I used to live in Fort Greene, and whenever I visit my old neighborhood, I am tormented by the same absurd thought: I should have bought that crack house when I had the chance. <blockquote/> 
 
 The 2004 [rezoning](https://www.brooklyn-usa.org/wp-content/uploads/2016/02/Downtown-Brooklyn-2004-Rezoning_Final.pdf) of Dowtown Brooklyn added almost 10M sf of residential space and over 1M sf of both office and retail space. 
 
@@ -46,7 +46,7 @@ As expected ridership increased in Downtown Brooklyn.
 <img src="/img/mta/AtlBDNQR.png" height="100%" width="100%" class="inline"/>
 <img src="/img/mta/Atlantic2345.png" height="100%" width="100%" class="inline"/>
 
-Ultimately, the stations in the middle of all the new developments have seen an increase in station traffic
+Ultimately, the stations in the middle of all the new developments have seen an increase in station traffic.
 <img src="/img/mta/Capture.JPG" height="100%" width="100%" class="inline"/>
 
-Further analysis on surrounding stations and the overall % change in traffic throughout the MTA system would help shed more light on the magniture of the increase, in comparison to a benchmark. 
+Further analysis on surrounding stations and the overall % change in traffic throughout the MTA system would help shed more light on the magnitude of the increase, in comparison to a benchmark. 
