@@ -53,6 +53,7 @@ blockquote {
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 blockquote:before {
   color: #ccc;
