@@ -23,7 +23,7 @@ Looks like Instacart users eat relatively healthy, with produce and dairy eggs s
 ### Visualizing Department Affinity
 <img src="/img/instacart/Dept_matrix.JPG" height="100%" width="100%" class="inline"/>
 
-Produce and dairy eggs departments are most often found bundled together, while snacks are usually brough with almost every department! 
+Produce and dairy eggs departments are most often found bundled together, while snacks are usually brough with almost every department! The other interesting observation was how the babies category is virtually blank, which may point to the age of the user base. 
 
 ### Top 25 Departments Shopped Together
 <img src="/img/instacart/Top25dept.JPG" height="100%" width="100%" class="inline"/>
