@@ -7,7 +7,7 @@ title: Instacart Affinity Analysis
 
 Last year, Instacart joined the open data movement and released information on over 3 million orders in hopes of spurring new ways of analyzing their data. The [anonymized dataset](https://tech.instacart.com/3-million-instacart-orders-open-sourced-d40d29ead6f2) contains a sample of orders from over 200k Instacart users. 
 
-This data is great for testing machine learning and data mining models to better understand shopping patterns. Instacart even sponsored a [kaggle contest](https://www.kaggle.com/c/instacart-market-basket-analysis)just for that purpose. Let's see what we could learn from a simple affinity analysis!
+This data is great for testing machine learning and data mining models to better understand shopping patterns. Instacart even sponsored a [kaggle contest](https://www.kaggle.com/c/instacart-market-basket-analysis) just for that purpose. Let's see what we could learn from a simple affinity analysis!
 
 ## Methods
 
