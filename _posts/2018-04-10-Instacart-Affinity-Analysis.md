@@ -18,7 +18,7 @@ Using Python, Instacart data was merged into one complete file and processed to 
 ### Top Departments
 <img src="/img/instacart/Departments.JPG" height="100%" width="100%" class="inline"/>
 
-Looks like instacart users eat relatively healthy, with produce and dairy eggs showing highest amount of purchases. This is quickly followed by beverages, frozen food, and snacks. 
+Looks like Instacart users eat relatively healthy, with produce and dairy eggs showing highest amount of purchases. This is quickly followed by beverages, frozen food, and snacks. 
 
 ### Visualizing Department Affinity
 <img src="/img/instacart/Dept_matrix.JPG" height="100%" width="100%" class="inline"/>
