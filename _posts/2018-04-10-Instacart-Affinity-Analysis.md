@@ -12,11 +12,11 @@ title: Instacart Affinity Analysis
 ## Results
 
 
-### Viewing Bank Closure Data with geoplotlib
-<img src="/img/instacart/departments.png" height="100%" width="100%" class="inline"/>
+### Top Departments
+<img src="/img/instacart/departments.jpg" height="100%" width="100%" class="inline"/>
 
-### Closures Peaked in 2009-2010
-<img src="/img/instacart/dept_matrix.png" height="100%" width="100%" class="inline"/>
+### Visualizing Department Affinity
+<img src="/img/instacart/dept_matrix.jpg" height="100%" width="100%" class="inline"/>
 
-### Georgia Led in Bank Failures
-<img src="/img/instacart/Top25dept.png" height="100%" width="100%" class="inline"/>
+### Top 25 Departments Shopped Together
+<img src="/img/instacart/Top25dept.jpg" height="100%" width="100%" class="inline"/>
