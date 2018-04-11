@@ -18,7 +18,7 @@ Using Python, Instacart data was merged into one complete file and processed to 
 ### Top Departments
 <img src="/img/instacart/Departments.JPG" height="100%" width="100%" class="inline"/>
 
-Looks like instacart users eat realitely healthy, with produce and dairy eggs showing highest amount of purchases. This is quickly followed by beverages, frozen food, and snacks. 
+Looks like instacart users eat relatively healthy, with produce and dairy eggs showing highest amount of purchases. This is quickly followed by beverages, frozen food, and snacks. 
 
 ### Visualizing Department Affinity
 <img src="/img/instacart/Dept_matrix.JPG" height="100%" width="100%" class="inline"/>
@@ -28,4 +28,4 @@ Produce and dairy eggs departments are most often found bundled together, while 
 ### Top 25 Departments Shopped Together
 <img src="/img/instacart/Top25dept.JPG" height="100%" width="100%" class="inline"/>
 
-Another way of looking at the matrix shows us the same pattern. While dairy eggs and produce are most often bough together, they are often bundled with snacks and beverages. 
+Another way of looking at the matrix shows us the same pattern. While dairy eggs and produce are most often bought together, they are often bundled with snacks and beverages. 
