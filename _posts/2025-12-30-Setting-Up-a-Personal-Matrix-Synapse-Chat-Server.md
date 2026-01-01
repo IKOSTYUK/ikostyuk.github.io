@@ -30,14 +30,10 @@ There are a few ways to install a Matrix Synapse server, but a fairly straightfo
 
 Pull the Docker image and set up the initial config by running the below: 
 
-    `docker run -it --rm \`
-  
-      `--mount type=volume,src=synapse-data,dst=/data \`
-      
+    `docker run -it --rm \`  
+      `--mount type=volume,src=synapse-data,dst=/data \`    
       `-e SYNAPSE_SERVER_NAME=my.matrix.host \`
-      
       `-e SYNAPSE_REPORT_STATS=yes \`
-      
       `matrixdotorg/synapse:latest generate`
 
 *substitue my.matrix.host for your personal domain name.* 
@@ -48,21 +44,21 @@ The first change we will make is to the database spporting Synapse. Initially, i
 
 Install and connect to PostgreSQL to setup a user and db for Synapse: 
 
-  `sudo su -l postgres`
-  `createuser --pwprompt synapse_user`
-  `createdb --encoding=UTF8 --locale=C --template=template0 --owner=synapse_user synapse`
+      `sudo su -l postgres`
+      `createuser --pwprompt synapse_user`
+      `createdb --encoding=UTF8 --locale=C --template=template0 --owner=synapse_user synapse`
 
 Once that's complete we can edit the `homeserver.yaml` file to link the new db 
 
-  `database:`
-    `name: psycopg2`
-    `args:`
-      `user: synapse_user`
-      `password: [the password you created]`
-      `database: synapse`
-      `host: 127.0.0.1`
-      `cp_min: 1`
-      `cp_max: 25`
+      `database:`
+        `name: psycopg2`
+        `args:`
+          `user: synapse_user`
+          `password: [the password you created]`
+          `database: synapse`
+          `host: 127.0.0.1`
+          `cp_min: 1`
+          `cp_max: 25`
 
 
 
