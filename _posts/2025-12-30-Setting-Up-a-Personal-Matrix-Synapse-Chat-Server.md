@@ -153,7 +153,7 @@ If all goes well and you visit http://localhost:8008 you should see:
 You can also use [Matrix Federation Tester](https://federationtester.matrix.org/)
 
 Fire up your Element app and login!
-<img src="/img/matrix/matrix3.png" height="100%" width="100%" class="inline"/>
+<img src="/img/matrix/matrix3.PNG" height="100%" width="100%" class="inline"/>
 
 
 
