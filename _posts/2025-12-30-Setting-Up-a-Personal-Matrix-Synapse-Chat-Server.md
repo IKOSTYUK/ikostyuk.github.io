@@ -31,7 +31,6 @@ There are a few ways to install a Matrix Synapse server, but a fairly straightfo
 Pull the Docker image and set up the initial config by running the below: 
 
   `docker run -it --rm \`
-  
       `--mount type=volume,src=synapse-data,dst=/data \`
       
       `-e SYNAPSE_SERVER_NAME=my.matrix.host \`
