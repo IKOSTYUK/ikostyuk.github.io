@@ -91,6 +91,46 @@ Once that's complete we should also set up our SSL certificates for Apache to ut
 
 ## Cloudflare
 
+Instead of port fowarding with our router, we will instead use a Cloudflare tunnel for a more secure connection. Install cloudflare tunnel via Docker and make sure it points inside the docker container https://host.docker.internal:443 so it can communicate with Apache locally. 
+
+Finally, we need to configure the .well-known files in either Apache or Cloudflare. These files help other clients and servers to be able to locate and dsicvoer your Matrix server through the tunnel. To reduce the load on the Apache server, we will intercept these requests with Cloudflare by using a Cloudflare worker:
+
+    const HOMESERVER_URL = "https://matrix.yourdomain.com"; // Your Synapse URL
+    const SERVER_NAME = "matrix.yourdomain.com:443";      // Your federation address
+    
+    export default {
+      async fetch(request, env) {
+        const url = new URL(request.url);
+        const path = url.pathname;
+    
+        // Define the JSON responses
+        const clientConfig = {
+          "m.homeserver": { "base_url": HOMESERVER_URL }
+        };
+        
+        const serverConfig = {
+          "m.server": SERVER_NAME
+        };
+    
+        // Routing logic
+        if (path === "/.well-known/matrix/client") {
+          return new Response(JSON.stringify(clientConfig), {
+            headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
+          });
+        }
+    
+        if (path === "/.well-known/matrix/server") {
+          return new Response(JSON.stringify(serverConfig), {
+            headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
+          });
+        }
+    
+        // Pass everything else through to your Apache proxy/Origin
+        return fetch(request);
+      }
+    };
+
+
 
 
 
