@@ -32,7 +32,7 @@ Pull the Docker image and set up the initial config by running the below:
       -e SYNAPSE_REPORT_STATS=yes \
       matrixdotorg/synapse:latest generate
 
-*Substitue my.matrix.host for your personal domain name.* 
+*Substitute my.matrix.host for your personal domain name.* 
 
 There will now be a Docker volume which includes the config file `homeserver.yaml` that will control how Synapse behaves. 
 
@@ -88,7 +88,7 @@ Will Lewis gives an example of the VirtualHost file implementation on [his blog]
             # SSL Options
     </VirtualHost>
 
-*Substitue the first few server rows for your personal domain name.*
+*Substitute the first few server rows for your personal domain name.*
 
 Once that's complete we should also set up our SSL certificates for Apache to utilize. Assuming we still have no access to the outside world via our network, we can do this with the Let's Encrypt DNS-01 Challenge and verify the TXT record manually. 
 
