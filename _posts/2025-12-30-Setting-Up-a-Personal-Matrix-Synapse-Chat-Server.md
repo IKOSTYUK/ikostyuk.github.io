@@ -145,7 +145,17 @@ We are finally ready to run Synapse with the following command:
         -p 8008:8008 \
         matrixdotorg/synapse:latest
 
-*Make sure to change -p 8008:8008 to  -p 127.0.0.1:8008:8008 so Synapse listens only to your local machine and is not exposed publically.*
+*Make sure to change -p 8008:8008 to  -p 127.0.0.1:8008:8008 so Synapse listens only to your local Apache server and is not exposed publically.*
+
+If all goes well and you visit http://localhost:8008 you should see:
+<img src="/img/matrix/matrix2.png" height="100%" width="100%" class="inline"/>
+
+You can also use [Matrix Federation Tester](https://federationtester.matrix.org/)
+
+Fire up your Element app and login!
+<img src="/img/matrix/matrix3.png" height="100%" width="100%" class="inline"/>
+
+
 
 
 
