@@ -130,7 +130,11 @@ Finally, we need to configure the .well-known files in either Apache or Cloudfla
       }
     };
 
+We also want to configure worker routes to trigger only for the specific Matrix discovery paths. Add the following two routes (replace yourdomain.com with your apex domain):
 
+    yourdomain.com/.well-known/matrix/client
+
+    yourdomain.com/.well-known/matrix/server
 
 
 
