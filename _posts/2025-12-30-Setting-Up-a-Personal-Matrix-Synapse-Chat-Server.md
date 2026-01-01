@@ -136,7 +136,16 @@ We also want to configure worker routes to trigger only for the specific Matrix 
 
     yourdomain.com/.well-known/matrix/server
 
+# Running Synapse
 
+We are finally ready to run Synapse with the following command: 
+
+    docker run -d --name synapse \
+        --mount type=volume,src=synapse-data,dst=/data \
+        -p 8008:8008 \
+        matrixdotorg/synapse:latest
+
+*Make sure to change -p 8008:8008 to  -p 127.0.0.1:8008:8008 so Synapse listens only to your local machine and is not exposed publically.*
 
 
 
