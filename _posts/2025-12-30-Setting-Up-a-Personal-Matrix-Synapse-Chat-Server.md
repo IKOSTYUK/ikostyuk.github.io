@@ -54,6 +54,9 @@ Once that's complete we can edit the `homeserver.yaml` file to link the new db:
           cp_min: 1
           cp_max: 25
 
+Additional documentation for the config file can be found here: [Synapse Installation Guide](https://matrix-org.github.io/synapse/latest/usage/configuration/config_documentation.html)
+
+
 ## Apache
 
 Setting up an Apache reverse proxy will help with security and routing. Apache will run on port 443 and hand off traffic to Synapse on port 8008. We will configure all of Matrix communication to run on port 443 regardless of server-server or client-server traffic. That will help us simplify the process, especially with the Cloudflare tunnel, which will connect directly to 443. 
@@ -150,7 +153,7 @@ We are finally ready to run Synapse with the following command:
 If all goes well and you visit http://localhost:8008 you should see:
 <img src="/img/matrix/matrix2.png" height="100%" width="100%" class="inline"/>
 
-You can also use [Matrix Federation Tester](https://federationtester.matrix.org/)
+You can also use the [Matrix Federation Tester](https://federationtester.matrix.org/) for additional checks. 
 
 Fire up your Element app and login!
 <img src="/img/matrix/matrix3.PNG" height="100%" width="100%" class="inline"/>
