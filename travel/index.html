@@ -42,6 +42,8 @@ photos:
     caption: Osaka, Japan
 ---
 
+<h2 class="gallery-heading">Asia</h2>
+
 <div class="gallery">
 	{% for photo in page.photos %}
 	<a class="gallery-item"
@@ -68,11 +70,12 @@ photos:
 
 <script>
 (function () {
-	var gallery = document.querySelector('.gallery');
 	var lightbox = document.getElementById('lightbox');
-	if (!gallery || !lightbox) return;
+	if (!lightbox) return;
 
-	var items = Array.prototype.slice.call(gallery.querySelectorAll('.gallery-item'));
+	// Collected across every .gallery on the page, so extra sections just work.
+	var items = Array.prototype.slice.call(document.querySelectorAll('.gallery-item'));
+	if (!items.length) return;
 	var img = document.getElementById('lightbox-img');
 	var caption = document.getElementById('lightbox-caption');
 	var index = -1;
@@ -111,7 +114,7 @@ photos:
 		if (lastFocused) lastFocused.focus();
 	}
 
-	gallery.addEventListener('click', function (e) {
+	document.addEventListener('click', function (e) {
 		var link = e.target.closest ? e.target.closest('.gallery-item') : null;
 		if (!link) return;
 		e.preventDefault();
