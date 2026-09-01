@@ -47,6 +47,105 @@ ul.posts li {
 
 
 
+/* --- Travel gallery --------------------------------------------------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+    margin: 40px 0;
+}
+.gallery-item {
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #f0f0f0;
+    cursor: zoom-in;
+}
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .25s ease, opacity .25s ease;
+}
+.gallery-item:hover img,
+.gallery-item:focus-visible img {
+    transform: scale(1.04);
+    opacity: .85;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .92);
+    cursor: zoom-out;
+}
+.lightbox[hidden] {
+    display: none;
+}
+body.lightbox-open {
+    overflow: hidden;
+}
+.lightbox-figure {
+    margin: 0;
+    max-width: 92vw;
+    text-align: center;
+}
+.lightbox-img {
+    display: block;
+    max-width: 92vw;
+    max-height: 85vh;
+    margin: 0 auto;
+    cursor: default;
+}
+.lightbox-caption {
+    margin-top: 14px;
+    color: #ddd;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1em;
+}
+.lightbox-btn {
+    position: absolute;
+    background: none;
+    border: 0;
+    padding: 0 18px;
+    color: #fff;
+    opacity: .65;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    line-height: 1;
+    cursor: pointer;
+}
+.lightbox-btn:hover,
+.lightbox-btn:focus-visible {
+    opacity: 1;
+}
+.lightbox-close {
+    top: 12px;
+    right: 12px;
+    font-size: 2.5em;
+}
+.lightbox-prev,
+.lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4em;
+}
+.lightbox-prev { left: 4px; }
+.lightbox-next { right: 4px; }
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 6px;
+    }
+    .lightbox-prev,
+    .lightbox-next { font-size: 2.5em; }
+}
+
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;

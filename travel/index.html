@@ -1,137 +1,134 @@
 ---
 layout: default
 title: Travel
-home: passive
-cv: active
-projects: passive
-notes: passive
-contact: passive
----		
+photos:
+  - file: SR1.jpeg
+    caption: Siem Reap, Cambodia
+  - file: SR2.jpeg
+    caption: Siem Reap, Cambodia
+  - file: hk.jpeg
+    caption: Hong Kong
+  - file: cm1.jpeg
+    caption: Chiang Mai, Thailand
+  - file: cm2.jpeg
+    caption: Chiang Mai, Thailand
+  - file: bk.jpeg
+    caption: Bangkok, Thailand
+  - file: ks.jpeg
+    caption: Koh Samui, Thailand
+  - file: jpn_hk.jpeg
+    caption: Hakone, Japan
+  - file: tky1.jpeg
+    caption: Tokyo, Japan
+  - file: kw1.jpeg
+    caption: Kanazawa, Japan
+  - file: kw2.jpeg
+    caption: Kanazawa, Japan
+  - file: kyt.jpeg
+    caption: Kyoto, Japan
+  - file: kyt2.jpeg
+    caption: Kyoto, Japan
+  - file: kyt3.jpeg
+    caption: Kyoto, Japan
+  - file: nara.jpeg
+    caption: Nara, Japan
+  - file: nara2.jpeg
+    caption: Nara, Japan
+  - file: koya.jpeg
+    caption: Koya, Japan
+  - file: koya2.jpeg
+    caption: Koya, Japan
+  - file: osaka.jpeg
+    caption: Osaka, Japan
+---
 
-				<br/><br/>
+<div class="gallery">
+	{% for photo in page.photos %}
+	<a class="gallery-item"
+	   href="/img/travel/{{ photo.file }}"
+	   data-caption="{{ photo.caption }}"
+	   aria-label="{{ photo.caption }}">
+		<img src="/img/travel/thumbs/{{ photo.file }}"
+		     alt="{{ photo.caption }}"
+		     width="600" height="600"
+		     loading="lazy" decoding="async"/>
+	</a>
+	{% endfor %}
+</div>
 
-				<img src="/img/travel/SR1.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+	<button class="lightbox-btn lightbox-close" type="button" aria-label="Close">&times;</button>
+	<button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous photo">&#8249;</button>
+	<button class="lightbox-btn lightbox-next" type="button" aria-label="Next photo">&#8250;</button>
+	<figure class="lightbox-figure">
+		<img class="lightbox-img" id="lightbox-img" src="" alt=""/>
+		<figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+	</figure>
+</div>
 
-				<p> Siem Reap, Cambodia </p>
+<script>
+(function () {
+	var gallery = document.querySelector('.gallery');
+	var lightbox = document.getElementById('lightbox');
+	if (!gallery || !lightbox) return;
 
-        			<br/><br/>
+	var items = Array.prototype.slice.call(gallery.querySelectorAll('.gallery-item'));
+	var img = document.getElementById('lightbox-img');
+	var caption = document.getElementById('lightbox-caption');
+	var index = -1;
+	var lastFocused = null;
 
-        			<img src="/img/travel/SR2.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
+	function preload(i) {
+		if (i < 0 || i >= items.length) return;
+		var pre = new Image();
+		pre.src = items[i].getAttribute('href');
+	}
 
-				<p> Siem Reap, Cambodia </p>
-        			<br/><br/>
+	function show(i) {
+		index = (i + items.length) % items.length;
+		var item = items[index];
+		img.src = item.getAttribute('href');
+		img.alt = item.getAttribute('data-caption') || '';
+		caption.textContent = item.getAttribute('data-caption') || '';
+		// Fetch the neighbours so arrow-key browsing feels instant.
+		preload(index + 1);
+		preload(index - 1);
+	}
 
-        			<img src="/img/travel/hk.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
+	function open(i) {
+		lastFocused = document.activeElement;
+		lightbox.hidden = false;
+		document.body.classList.add('lightbox-open');
+		show(i);
+		lightbox.querySelector('.lightbox-close').focus();
+	}
 
-				<p> Hong Kong </p>
-        			<br/><br/>
+	function close() {
+		lightbox.hidden = true;
+		document.body.classList.remove('lightbox-open');
+		// removeAttribute, not src = '', which some browsers resolve to the page URL.
+		img.removeAttribute('src');
+		if (lastFocused) lastFocused.focus();
+	}
 
-        			<img src="/img/travel/cm1.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
+	gallery.addEventListener('click', function (e) {
+		var link = e.target.closest ? e.target.closest('.gallery-item') : null;
+		if (!link) return;
+		e.preventDefault();
+		open(items.indexOf(link));
+	});
 
-				<p> Chiang Mai, Thailand </p>
-        			<br/><br/>
+	lightbox.addEventListener('click', function (e) {
+		if (e.target.classList.contains('lightbox-next')) show(index + 1);
+		else if (e.target.classList.contains('lightbox-prev')) show(index - 1);
+		else if (!e.target.classList.contains('lightbox-img')) close();
+	});
 
-        			<img src="/img/travel/cm2.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Chiang Mai, Thailand </p>
-        			<br/><br/>
-
-        			<img src="/img/travel/bk.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Bangkok, Thailand </p>
-        			<br/><br/>
-
-        			<img src="/img/travel/ks.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Koh Samui, Thailand </p>
-        			<br/><br/>
-
-        			<img src="/img/travel/jpn_hk.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Hakone, Japan </p>
-
-        			<br/><br/>
-
-        			<img src="/img/travel/tky1.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Tokyo, Japan </p>
-
-        			<br/><br/>
-
-        			<img src="/img/travel/kw1.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Kanazawa, Japan </p>
-
-        			<br/><br/>
-
-        			<img src="/img/travel/kw2.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Kanazawa, Japan </p>
-
-            			<br/><br/>
-
-        			<img src="/img/travel/kyt.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Kyoto, Japan </p>
-
-
-            			<br/><br/>
-
-        			<img src="/img/travel/kyt2.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Kyoto, Japan </p>
-
-            			<br/><br/>
-
-        			<img src="/img/travel/kyt3.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Kyoto, Japan </p>
-
-            			<br/><br/>
-
-        			<img src="/img/travel/nara.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Nara, Japan </p>
-
-            			<br/><br/>
-
-        			<img src="/img/travel/nara2.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Nara, Japan </p>
-
-            			<br/><br/>
-
-        			<img src="/img/travel/koya.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Koya, Japan </p>
-
-            			<br/><br/>
-
-        			<img src="/img/travel/koya2.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Koya, Japan </p>
-
-            			<br/><br/>
-
-        			<img src="/img/travel/osaka.jpeg" height="100%" width="100%"/> 
-				<! -- style="float:left;margin:0px 50px" --> 
-
-				<p> Osaka, Japan </p>
+	document.addEventListener('keydown', function (e) {
+		if (lightbox.hidden) return;
+		if (e.key === 'Escape') close();
+		else if (e.key === 'ArrowRight') show(index + 1);
+		else if (e.key === 'ArrowLeft') show(index - 1);
+	});
+}());
+</script>
