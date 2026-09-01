@@ -2,3 +2,8 @@ name: Data_data
 markdown: kramdown
 highlighter: rouge
 #theme: jekyll-theme-primer
+
+# Local build tooling, not part of the published site.
+exclude:
+  - scripts/
+  - .venv/
