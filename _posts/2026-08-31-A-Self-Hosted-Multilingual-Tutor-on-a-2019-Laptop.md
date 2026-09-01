@@ -1,6 +1,6 @@
 ---
 layout: default
-title: A Self-Hosted Multilingual Tutor on a 2019 Laptop
+title: A Self-Hosted Multilingual Tutor
 ---
 
 ## A Self-Hosted Multilingual Tutor on a 2019 Laptop
