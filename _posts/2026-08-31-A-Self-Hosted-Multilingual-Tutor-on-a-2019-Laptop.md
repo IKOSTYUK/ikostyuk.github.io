@@ -3,7 +3,7 @@ layout: default
 title: A Self-Hosted Multilingual Tutor
 ---
 
-## A Self-Hosted Multilingual Tutor on a 2019 Laptop
+## A Self-Hosted Multilingual Tutor
 
 No API keys, no cloud, no telemetry. A 35-billion-parameter model, speech recognition and two speech synthesisers, all served from a 2019 MacBook Pro running Linux — and reaching conversational speed by consistently choosing the option that looked slower.
 
