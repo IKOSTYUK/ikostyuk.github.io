@@ -45,9 +45,102 @@ ul.posts li {
     list-style: none;
 }
 
+/* Post body lists, matched to paragraph size. The nav and footer lists sit
+   outside .container, and the blog index opts out via .posts. */
+.container ul:not(.posts) li,
+.container ol li {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
 
+
+
+/* --- Post charts ------------------------------------------------------ */
+/* Scoped to .chart so the rest of the site is untouched. Variable names match
+   the ones referenced inline by the SVG markup - do not rename them. */
+.chart {
+    --surface-1:      #fcfcfb;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --grid:           #e1e0d9;
+    --axis:           #c3c2b7;
+    --border:         rgba(11, 11, 11, .10);
+    --series-1:       #2a78d6;
+    --series-2:       #eb6834;
+    --series-3:       #1baf7a;
+    --series-4:       #eda100;
+    --seq-250:        #86b6ef;
+    --seq-450:        #2a78d6;
+    --deemph:         #c3c2b7;
+
+    margin: 32px 0;
+    padding: 22px 24px 18px;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    color: var(--text-primary);
+    line-height: 1.55;
+}
+.chart .title { font-size: 17px; font-weight: 700; }
+.chart .sub { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+.chart svg { display: block; width: 100%; height: auto; margin-top: 16px; overflow: visible; }
+.chart figcaption { font-size: 13.5px; color: var(--text-secondary); margin-top: 14px; }
+
+.chart .legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 14px; }
+.chart .legend span { display: inline-flex; align-items: center; gap: 7px;
+                      font-size: 13px; color: var(--text-secondary); }
+.chart .legend i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+
+.chart .tick   { fill: var(--text-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.chart .lbl    { fill: var(--text-secondary); font-size: 13px; }
+.chart .lbl-hi { fill: var(--text-primary); font-size: 13px; font-weight: 700; }
+.chart .val    { fill: var(--text-primary); font-size: 13px; font-weight: 700; }
+.chart .val-in { font-size: 12px; font-weight: 700; }
+/* Annotations sit over shaded regions, so they carry a knockout halo in the
+   surface colour rather than a box. Stroke is painted first. */
+.chart .anno   { fill: var(--text-muted); font-size: 12px;
+                 stroke: var(--surface-1); stroke-width: 3px; paint-order: stroke fill; }
+.chart .gridline { stroke: var(--grid); stroke-width: 1; }
+.chart .axisline { stroke: var(--axis); stroke-width: 1; }
+
+.chart details { margin-top: 12px; border-top: 1px solid var(--border); padding-top: 10px; }
+.chart summary { cursor: pointer; font-size: 13px; color: var(--text-secondary); }
+.chart summary:hover { color: var(--text-primary); }
+.chart table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 13.5px; }
+.chart th, .chart td { text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--border); }
+.chart th:first-child, .chart td:first-child { text-align: left; }
+.chart th { color: var(--text-muted); font-weight: 600; font-size: 12px;
+            letter-spacing: .04em; text-transform: uppercase; }
+.chart td { font-variant-numeric: tabular-nums; }
+
+.chart [data-tip] { cursor: default; }
+#tip {
+    position: fixed; pointer-events: none; opacity: 0; transition: opacity .12s;
+    background: #0b0b0b; color: #fcfcfb;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 12.5px; line-height: 1.45; padding: 7px 10px; border-radius: 7px;
+    max-width: 260px; z-index: 50; box-shadow: 0 4px 16px rgba(0, 0, 0, .18);
+}
+
+/* Facts table used in the body of a post, outside a chart card. */
+.ruled { width: 100%; border-collapse: collapse; margin: 18px 0;
+         font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
+.ruled th, .ruled td { text-align: left; padding: 11px 12px 11px 0;
+                       border-bottom: 1px solid #d5d5d5; vertical-align: top; }
+.ruled td:first-child { width: 34%; font-weight: 600; }
 
 /* --- Travel gallery --------------------------------------------------- */
+.gallery-heading {
+    margin: 48px 0 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding-bottom: 8px;
+}
+.gallery-heading + .gallery {
+    margin-top: 16px;
+}
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
